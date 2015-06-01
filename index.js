@@ -23,8 +23,8 @@ module.exports = function(source) {
       more.configFile(path.join(process.cwd(), config.configFile));
     }
   }
-  if(config.combo) {
-    return more.parseFile(this.resource, true);
+  if(config.type) {
+    return more.parse(source, config.type);
   }
   return more.parse(source);
 };
